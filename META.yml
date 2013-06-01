@@ -1,0 +1,22 @@
+---
+abstract: 'Web interface for DBIx::Class Schema/ResultSource/ResultSet'
+author:
+  - 'ChinaXing(陈云星) <chen.yack@gmail.com>'
+build_requires: {}
+configure_requires:
+  ExtUtils::MakeMaker: 6.30
+dynamic_config: 0
+generated_by: 'Dist::Zilla version 4.300032, CPAN::Meta::Converter version 2.120921'
+license: bsd
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: 1.4
+name: Mojolicious-Plugin-DBICAdmin
+requires:
+  Mojo::Base: 0
+  Mojolicious: 0.4
+  Web::Util::DBIC::Paging: 0
+  strict: 0
+  utf8: 0
+  warnings: 0
+version: 0.0001
