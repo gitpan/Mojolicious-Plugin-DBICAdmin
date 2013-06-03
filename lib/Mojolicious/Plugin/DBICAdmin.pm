@@ -1,3 +1,4 @@
+# ABSTRACT: Web interface for DBIx::Class Schema/ResultSource/ResultSet
 use utf8;
 use strict;
 use warnings;
@@ -8,73 +9,6 @@ use Web::Util::DBIC::Paging;
 
 my $config = { page_size => 25, };
 
-=head1 NAME
-
-DBICAdmin -  Web interface for DBIx::Class Schema/ResultSource/ResultSet
-
-=head1 SYNOPSIS
-
-This Plugin just for Web master view/search their data in DB
-
-=head1 DESCRIPTION
-
-You will see it, when you open URI : L</admin/dbic/>
-
-=head2 routes
-
-the Plugin set following routes :
-
-=over
-
-=item C</admin/dbic/>
-
-Index of the module's function
-
-=item C</admin/dbic/search> and C</admin/dbic/search/:source>
-
-Search DBIx::Class drivered database
-
-=item C</admin/dbic/info> and C</admin/dbic/info/:source>
-
-List Result Source Class's columns info
-
-=item C</admin/dbic/list>
-
-List Result source loaded by DBIx::Class
-
-=back
-
-=head2 display style
-
-Plugin use L<purecss|http://purecss.io/>
-
-you can use customed theme of purecss by pass config directive : C<stylesheet="/dbic-admin-pure.css">
-
-customlized theme of purecss must use name : C<.pure-skin-dbic>
-
-where to coustom the theme ?
-
-L<Here|http://yui.github.io/skinbuilder/?mode=pure>
-
-=head2 config
-
-=over
-
-=item page_size
-
-rows displayed per page
-
-=item stylesheet
-
-theme of the web page, should be the url of css file create by L<YUI Skin Builder|http://yui.github.io/skinbuilder/?mode=pure>
-
-=item condition
-
-array or scalar if single of Mojolicious route condition used for access control
-
-=back
-
-=cut
 
 sub register {
     my ( $self, $app, $conf ) = @_;
@@ -163,6 +97,113 @@ sub _dbic_index {
 }
 
 1;
+
+=pod
+
+=head1 NAME
+
+Mojolicious::Plugin::DBICAdmin - Web interface for DBIx::Class Schema/ResultSource/ResultSet
+
+=head1 VERSION
+
+version 0.0002
+
+=head1 SYNOPSIS
+
+This Plugin just for Web master view/search their data in DB
+
+=head2 Configure
+
+In Mojolicious App's ``startup`` method:
+
+  $self->plugin('DBICAdmin' =>   {
+              condition => 'login', # optional
+              stylesheet => '/dbic-admin-pure.css', #optional
+              # ... other configurations
+  });
+
+=head2 Use
+
+  #start app and view the URI :
+  http://yourapp.domain/admin/dbic/
+
+=head1 DESCRIPTION
+
+You will see it, when you open URI : L</admin/dbic/>
+
+=head2 routes
+
+the Plugin set following routes :
+
+=over
+
+=item C</admin/dbic/>
+
+Index of the module's function
+
+=item C</admin/dbic/search> and C</admin/dbic/search/:source>
+
+Search DBIx::Class drivered database
+
+=item C</admin/dbic/info> and C</admin/dbic/info/:source>
+
+List Result Source Class's columns info
+
+=item C</admin/dbic/list>
+
+List Result source loaded by DBIx::Class
+
+=back
+
+=head2 display style
+
+Plugin use L<purecss|http://purecss.io/>
+
+you can use customed theme of purecss by pass config directive : C<stylesheet="/dbic-admin-pure.css">
+
+customlized theme of purecss must use name : C<.pure-skin-dbic>
+
+where to coustom the theme ?
+
+L<Here|http://yui.github.io/skinbuilder/?mode=pure>
+
+=head2 config
+
+=over
+
+=item page_size
+
+rows displayed per page
+
+=item stylesheet
+
+theme of the web page, should be the url of css file create by L<YUI Skin Builder|http://yui.github.io/skinbuilder/?mode=pure>
+
+=item condition
+
+array or scalar if single of Mojolicious route condition used for access control
+
+=back
+
+=encoding utf8
+
+=head1 NAME
+
+DBICAdmin -  Web interface for DBIx::Class Schema/ResultSource/ResultSet
+
+=head1 AUTHOR
+
+ChinaXing(陈云星) <chen.yack@gmail.com>
+
+=head1 COPYRIGHT AND LICENSE
+
+This software is Copyright (c) 2013 by ChinaXing(陈云星).
+
+This is free software, licensed under:
+
+  The (three-clause) BSD License
+
+=cut
 
 __DATA__
 
