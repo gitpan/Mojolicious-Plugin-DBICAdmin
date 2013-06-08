@@ -106,7 +106,7 @@ Mojolicious::Plugin::DBICAdmin - Web interface for DBIx::Class Schema/ResultSour
 
 =head1 VERSION
 
-version 0.0002
+version 0.0003
 
 =head1 SYNOPSIS
 
@@ -114,7 +114,7 @@ This Plugin just for Web master view/search their data in DB
 
 =head2 Configure
 
-In Mojolicious App's ``startup`` method:
+In Mojolicious App's C<startup> method:
 
   $self->plugin('DBICAdmin' =>   {
               condition => 'login', # optional

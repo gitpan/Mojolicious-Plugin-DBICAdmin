@@ -27,10 +27,18 @@ my %WriteMakefileArgs = (
     "utf8" => 0,
     "warnings" => 0
   },
-  "TEST_REQUIRES" => {},
-  "VERSION" => "0.0002",
+  "TEST_REQUIRES" => {
+    "DBIx::Class::Core" => 0,
+    "DBIx::Class::Schema" => 0,
+    "Mojolicious::Lite" => 0,
+    "Test::Mojo" => 0,
+    "Test::More" => 0,
+    "base" => 0,
+    "parent" => 0
+  },
+  "VERSION" => "0.0003",
   "test" => {
-    "TESTS" => ""
+    "TESTS" => "t/*.t"
   }
 );
 

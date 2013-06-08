@@ -6,3 +6,8 @@ README
 README.md
 dist.ini
 lib/Mojolicious/Plugin/DBICAdmin.pm
+t/00_compile.t
+t/lib/TestApp/Schema.pm
+t/lib/TestApp/Schema/Result/A.pm
+t/lib/TestApp/Schema/Result/B.pm
+t/list.t
