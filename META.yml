@@ -23,7 +23,8 @@ requires:
   Mojo::Base: 0
   Mojolicious: 0.4
   Web::Util::DBIC::Paging: 0
+  perl: v5.14.0
   strict: 0
   utf8: 0
   warnings: 0
-version: 0.0003
+version: 0.0004
