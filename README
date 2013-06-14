@@ -1,7 +1,7 @@
 
 
 This archive contains the distribution Mojolicious-Plugin-DBICAdmin,
-version 0.0004:
+version 0.0005:
 
   Web interface for DBIx::Class Schema/ResultSource/ResultSet
 

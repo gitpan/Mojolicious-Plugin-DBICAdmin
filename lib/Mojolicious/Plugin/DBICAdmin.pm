@@ -4,6 +4,9 @@ use utf8;
 use strict;
 use warnings;
 package Mojolicious::Plugin::DBICAdmin;
+{
+  $Mojolicious::Plugin::DBICAdmin::VERSION = '0.0005';
+}
 
 use Mojo::Base 'Mojolicious::Plugin';
 use Web::Util::DBIC::Paging;
@@ -107,7 +110,7 @@ Mojolicious::Plugin::DBICAdmin - Web interface for DBIx::Class Schema/ResultSour
 
 =head1 VERSION
 
-version 0.0004
+version 0.0005
 
 =head1 SYNOPSIS
 

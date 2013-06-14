@@ -19,24 +19,9 @@ my %WriteMakefileArgs = (
   "EXE_FILES" => [],
   "LICENSE" => "bsd",
   "NAME" => "Mojolicious::Plugin::DBICAdmin",
-  "PREREQ_PM" => {
-    "Mojo::Base" => 0,
-    "Mojolicious" => "0.4",
-    "Web::Util::DBIC::Paging" => 0,
-    "strict" => 0,
-    "utf8" => 0,
-    "warnings" => 0
-  },
-  "TEST_REQUIRES" => {
-    "DBIx::Class::Core" => 0,
-    "DBIx::Class::Schema" => 0,
-    "Mojolicious::Lite" => 0,
-    "Test::Mojo" => 0,
-    "Test::More" => 0,
-    "base" => 0,
-    "parent" => 0
-  },
-  "VERSION" => "0.0004",
+  "PREREQ_PM" => {},
+  "TEST_REQUIRES" => {},
+  "VERSION" => "0.0005",
   "test" => {
     "TESTS" => "t/*.t"
   }
