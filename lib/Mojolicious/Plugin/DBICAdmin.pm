@@ -5,7 +5,7 @@ use strict;
 use warnings;
 package Mojolicious::Plugin::DBICAdmin;
 {
-  $Mojolicious::Plugin::DBICAdmin::VERSION = '0.0005';
+  $Mojolicious::Plugin::DBICAdmin::VERSION = '0.0006';
 }
 
 use Mojo::Base 'Mojolicious::Plugin';
@@ -110,7 +110,7 @@ Mojolicious::Plugin::DBICAdmin - Web interface for DBIx::Class Schema/ResultSour
 
 =head1 VERSION
 
-version 0.0005
+version 0.0006
 
 =head1 SYNOPSIS
 
